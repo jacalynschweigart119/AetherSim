@@ -17,3 +17,4 @@ async def get_simulation_status(sim_id: str, runner: SimulationRunner = Depends(
 async def stop_simulation(sim_id: str, runner: SimulationRunner = Depends(SimulationRunner.get_instance)):
     await runner.stop_simulation(sim_id)
     return {"status": "stopped", "simulation_id": sim_id}
+
